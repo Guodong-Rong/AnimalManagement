@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalManagement.MainPage"
+             BackgroundColor="SteelBlue">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Grid RowDefinitions="50, 50, 50, 50, 50, 100" ColumnDefinitions="1*, 2*">
+                <Label Text="Dog Creator Example" FontSize="26" TextColor="White" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+                <Label Text="Name" FontSize="18" TextColor="White" Grid.Row="1" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="entName" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" BackgroundColor="LightGray"/>
+                <Label Text="Breed" FontSize="18" TextColor="White" Grid.Row="2" Grid.Column="0" VerticalOptions="Center"/>
+                <Entry x:Name="entBreed"  Grid.Row="2" Grid.Column="1" VerticalOptions="Center" BackgroundColor="LightGray"/>
+                <Label Text="Gender" FontSize="18" TextColor="White" Grid.Row="3" Grid.Column="0" VerticalOptions="Center"/>
+                <HorizontalStackLayout Grid.Row="3" Grid.Column="1" VerticalOptions="Center" >
+                    <RadioButton x:Name="radMale" Content="Male" GroupName="Gender" BackgroundColor="SteelBlue" />
+                    <RadioButton x:Name="radFemale" Content="Female" GroupName="Gender" BackgroundColor="SteelBlue"/>
+                </HorizontalStackLayout>
+                <Label Text="DOB" FontSize="18" TextColor="White" Grid.Row="4" Grid.Column="0" VerticalOptions="Center"/>
+                <DatePicker x:Name="datDOB" Grid.Row="4" Grid.Column="1" Format="dd/MM/yyyy"/>
+                <HorizontalStackLayout Grid.Row="5" Grid.ColumnSpan="2">
+                    <Button x:Name="btnCreate" Text="Instantiate Object" Margin="20" Clicked="btnCreate_Clicked" />
+                    <Button x:Name="btnGet" Text="Get Object Values" Margin="20" Clicked="btnGet_Clicked"/>
+                </HorizontalStackLayout>
+            </Grid>
+
+            
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

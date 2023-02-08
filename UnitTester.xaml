@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnimalManagement.UnitTester"
+             Title="UnitTester">
+    <VerticalStackLayout>
+        
+        <Grid RowDefinitions="50, 100, 400" ColumnDefinitions="1*, 1*">
+            <Label  Text="Unit Tester" FontSize="26" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center" BackgroundColor="White"/>
+            <Button x:Name="btnRunTests" Text="Run Tests" Margin="20" Grid.Row="1" Clicked="btnRunTests_Clicked"/>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
